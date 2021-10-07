@@ -41,4 +41,12 @@ const API = {
         return json;
       },
 
+      // Makes an API call to the api/workouts/range route and gets the workouts within range
+      async getWorkoutsInRange() {
+        const res = await fetch(`/api/workouts/range`);
+        const json = await res.json();
+    
+        return json;
+      },
+
 }
