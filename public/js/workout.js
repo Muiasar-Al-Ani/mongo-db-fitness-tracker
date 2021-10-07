@@ -20,4 +20,19 @@ async function initWorkout() {
     }
   }
 
+  // Gets the tallied exercises
+  function tallyExercises(exercises) {
+    const tallied = exercises.reduce((accumulator, currentValue) => {
+      if (currentValue.type === "resistance") {
+        accumulator.totalWeight = (accumulator.totalWeight || 0) + currentValue.weight;
+        accumulator.totalSets = (accumulator.totalSets || 0) + currentValue.sets;
+        accumulator.totalReps = (accumulator.totalReps || 0) + currentValue.reps;
+      } else if (currentValue.type === "cardio") {
+        accumulator.totalDistance = (accumulator.totalDistance || 0) + currentValue.distance;
+      }
+      return accumulator;
+    }, {});
+    return tallied;
+  }
+
   initWorkout();
