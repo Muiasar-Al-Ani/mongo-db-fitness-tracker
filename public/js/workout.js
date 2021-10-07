@@ -76,4 +76,16 @@ async function initWorkout() {
   }
   
 
+  // Renders the "You have not created a workout yet!" if there was no data returned from the database
+  function renderNoWorkoutText() {
+    const container = document.querySelector(".workout-stats");
+    const p = document.createElement("p");
+    const strong = document.createElement("strong");
+    strong.textContent = "You have not created a workout yet!"
+  
+    p.appendChild(strong);
+    container.appendChild(p);
+  }
+  
+
   initWorkout();
