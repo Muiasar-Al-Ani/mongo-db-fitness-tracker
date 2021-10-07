@@ -35,4 +35,16 @@ async function initWorkout() {
     return tallied;
   }
 
+  // Converts the time format from Unix time to mm/dd/yyyy format
+  function formatDate(date) {
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+  
+    return new Date(date).toLocaleDateString(options);
+  }
+
   initWorkout();
