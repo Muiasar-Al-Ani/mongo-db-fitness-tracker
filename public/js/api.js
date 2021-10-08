@@ -14,19 +14,19 @@ const API = {
       },
 
       // // Makes an API call with the PUT method to the api/workouts/withId route and update the identified workout with the new data 
-      // async addExercise(data) {
-      //   const id = location.search.split("=")[1];
+      async addExercise(data) {
+        const id = location.search.split("=")[1];
     
-      //   const res = await fetch("/api/workouts/" + id, {
-      //     method: "PUT",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify(data)
-      //   });
+        const res = await fetch("/api/workouts/" + id, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
     
-      //   const json = await res.json();
+        const json = await res.json();
     
-      //   return json;
-      // },
+        return json;
+      },
 
       // // Makes an API call with the POST method to the api/workouts route and creates new workout 
       // async createWorkout(data = {}) {
