@@ -9,11 +9,11 @@ async function initWorkout() {
   
       const workoutSummary = {
         date: formatDate(lastWorkout.day),
-        totalDuration: lastWorkout.totalDuration,
+        totalDuration: lastWorkout.exercises[0].duration,
         numExercises: lastWorkout.exercises.length,
         ...tallyExercises(lastWorkout.exercises)
       };
-  
+  console.log(lastWorkout)
       renderWorkoutSummary(workoutSummary);
     } else {
       renderNoWorkoutText()
@@ -64,6 +64,7 @@ async function initWorkout() {
     Object.keys(summary).forEach(key => {
       const p = document.createElement("p");
       const strong = document.createElement("strong");
+      // console.log(summary)
   
       strong.textContent = workoutKeyMap[key];
       const textNode = document.createTextNode(`: ${summary[key]}`);
@@ -76,7 +77,7 @@ async function initWorkout() {
   }
   
 
-  // Renders the "You have not created a workout yet!" if there was no data returned from the database
+  // Renders the "You have not created a workout yet!" if there was no data returned from the database 
   function renderNoWorkoutText() {
     const container = document.querySelector(".workout-stats");
     const p = document.createElement("p");
