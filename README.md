@@ -47,7 +47,7 @@ User can track their workout reps, distance, weight and more. All of this inform
 -  Chart.js.
 
 ## Screen shots : 
-### Here are screen shots of my deployed MongoDB Fitness Tracker App!![ScreenShot](./public/images/fitness1.png)![ScreenShot](./public/images/fitness2.png)![ScreenShot](./public/images/fitness3.png)![ScreenShot](./public/images/fitness4.png)![ScreenShot](./public/images/fitness5.png)
+### Here are screen shots of my deployed MongoDB Fitness Tracker App!![ScreenShot](./public/screenshots/fitness1.png)![ScreenShot](./public/screenshots/fitness2.png)![ScreenShot](./public/screenshots/fitness3.png)![ScreenShot](./public/screenshots/fitness4.png)![ScreenShot](./public/screenshots/fitness5.png)
 
 
 
