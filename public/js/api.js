@@ -28,18 +28,18 @@ const API = {
         return json;
       },
 
-      // // Makes an API call with the POST method to the api/workouts route and creates new workout 
-      // async createWorkout(data = {}) {
-      //   const res = await fetch("/api/workouts", {
-      //     method: "POST",
-      //     body: JSON.stringify(data),
-      //     headers: { "Content-Type": "application/json" }
-      //   });
+      // Makes an API call with the POST method to the api/workouts route and creates new workout 
+      async createWorkout(data = {}) {
+        const res = await fetch("/api/workouts", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" }
+        });
     
-      //   const json = await res.json();
+        const json = await res.json();
     
-      //   return json;
-      // },
+        return json;
+      },
 
       // // Makes an API call to the api/workouts/range route and gets the workouts within range
       // async getWorkoutsInRange() {

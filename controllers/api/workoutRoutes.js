@@ -12,7 +12,7 @@ router.get("/", async ({ res }) => {
   }
 });
 
-//
+// Updates or Adds if not found new exercises to the workout
 router.put("/:id", async (req, res) => {
   try {
     const dbUpdatedWorkout = await db.Workout.findByIdAndUpdate(
@@ -26,6 +26,17 @@ router.put("/:id", async (req, res) => {
       }
     );
     res.json(dbUpdatedWorkout);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Creates new workout object in the database
+router.post("/", async ({body}, res) => {
+  try {
+    const dbNewWorkouts = await db.Workout.create(body);
+    res.json(dbNewWorkouts);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
