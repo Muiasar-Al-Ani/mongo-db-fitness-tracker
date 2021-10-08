@@ -17,7 +17,7 @@ app.use(express.static("public"));
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://Muiasar:muiasar1234@cluster0.s03dh.mongodb.net/workout?retryWrites=true&w=majority", {
   useNewUrlParser: true,
 });
 
