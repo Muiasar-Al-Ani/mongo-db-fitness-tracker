@@ -47,7 +47,7 @@ router.post("/", async ({body}, res) => {
 // Gets all the workout exercises to show the data as graphs with the help of chart.js in the front end
 router.get("/range", async ({ res }) => {
   try {
-    const dbWorkouts = await db.Workout.find({});
+    const dbWorkouts = await db.Workout.find({}).limit(10);
     res.json(dbWorkouts);
   } catch (err) {
     console.log(err);
