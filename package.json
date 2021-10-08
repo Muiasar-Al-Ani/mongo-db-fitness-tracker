@@ -1,5 +1,5 @@
 {
-  "name": "fittness-tracker",
+  "name": "fitness-tracker",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.9",
+    "mongoose": "^5.3.16",
     "morgan": "^1.10.0"
   }
 }
